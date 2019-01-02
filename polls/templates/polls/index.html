@@ -4,6 +4,10 @@
         <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
     {% endfor %}
     </ul>
+{% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
